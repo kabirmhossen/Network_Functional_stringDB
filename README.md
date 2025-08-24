@@ -5,3 +5,25 @@ This project integrates Network and Functional Analysis of any gene. Sometimes, 
 
 ## Example PPI
 
+## Workflow
+
+### 1. Input Data
+- Enter any gene name or Ensembl Id of the desired genes
+
+### 2. PPI Construction
+- **Normalization**: Performed to ensure comparability across samples.
+- **Outlier Removal**: Removed to improve data quality.
+
+### 3. Enrichment Finder: for all the uploaded gene
+- **Microarray Data**: 
+  - Used the `limma` package for DEG analysis.
+- **RNA-Seq Data**: 
+  - Performed using the `DESeq2` package.
+- **Log Fold Change (LFC)**: 
+  - Calculated for DEGs and visualized using volcano plots.
+
+### 4. Interaction Finder: for individual gene
+
+### 4. PPI Construction: for individual gene
+### 4. Enrichments Finder: for individual gene
+
