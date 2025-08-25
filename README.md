@@ -46,3 +46,10 @@ This project integrates Network and Functional Analysis of any gene. Sometimes, 
 - **Filtering the Enrichments**: enrichments with p_value < 0.05 was selected for plotting
 - **Plot the top Enrichments**: Through filtering the top enrichments based on p_value enrichments are plotted
 
+### R Packages:
+- STRINGdb v2.12.1
+- stringr v1.5.0
+- dplyr v1.1.4
+- readr v2.1.4
+- ggplot2 v3.4.4
+
