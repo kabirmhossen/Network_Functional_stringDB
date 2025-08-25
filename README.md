@@ -11,10 +11,11 @@ This project integrates Network and Functional Analysis of any gene. Sometimes, 
 - Enter any gene name or Ensembl Id of the desired genes
 
 ### 2. PPI Construction of the input genes
-- **Neighbor identification**: Finding all possible neighbor genes with interaction scores evaluation.
+- **Neighbor identification**: Finding all possible neighbor genes with combined scores evaluation.
 - **Gene Mapping**: Extract all the genes in interaction with the gene input.
-- **Interaction Score Threshold**: Maintain theshold of interaction score > 150
-
+- **Combined Score Threshold**: Maintain theshold of interaction score > 150
+## Schematic illustration of the Workflow
+![Graphical Abstract](figure/Figure-01_Graphical_Abstract.png)
 ### 3. Enrichment Finder: for all the uploaded gene
 - **Get all the Enrichment**: Used the `get_enrichment` function in `STRINGdb` package.
 - **Check available categories of the Enrichments**: There are multiple categories of enrichments including KEGG, Reactome, Gene Ontology, pfam etc.
@@ -33,5 +34,13 @@ This project integrates Network and Functional Analysis of any gene. Sometimes, 
 - **all_targets: all target IDs plus the focal gene (for broader subnetworks)**
 
 ### 4. PPI Construction: for individual gene
+- **Neighbor identification**: Finding all possible neighbor genes with combined scores evaluation.
+- **Gene Mapping**: Extract all the genes in interaction with the gene input.
+- **Combined Score Threshold**: Maintain theshold of interaction score > 150
+
 ### 4. Enrichments Finder: for individual gene
+- **Get all the Enrichment**: Used the `get_enrichment` function in `STRINGdb` package.
+- **Check available categories of the Enrichments**: There are multiple categories of enrichments including KEGG, Reactome, Gene Ontology, pfam etc.
+- **Filtering the Enrichments**: enrichments with p_value < 0.05 was selected for plotting
+- **Plot the top Enrichments**: Through filtering the top enrichments based on p_value enrichments are plotted
 
