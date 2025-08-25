@@ -10,19 +10,27 @@ This project integrates Network and Functional Analysis of any gene. Sometimes, 
 ### 1. Input Data
 - Enter any gene name or Ensembl Id of the desired genes
 
-### 2. PPI Construction
-- **Normalization**: Performed to ensure comparability across samples.
-- **Outlier Removal**: Removed to improve data quality.
+### 2. PPI Construction of the input genes
+- **Neighbor identification**: Finding all possible neighbor genes with interaction scores evaluation.
+- **Gene Mapping**: Extract all the genes in interaction with the gene input.
+- **Interaction Score Threshold**: Maintain theshold of interaction score > 150
 
 ### 3. Enrichment Finder: for all the uploaded gene
-- **Microarray Data**: 
-  - Used the `limma` package for DEG analysis.
-- **RNA-Seq Data**: 
-  - Performed using the `DESeq2` package.
-- **Log Fold Change (LFC)**: 
-  - Calculated for DEGs and visualized using volcano plots.
+- **Get all the Enrichment**: Used the `get_enrichment` function in `STRINGdb` package.
+- **Check available categories of the Enrichments**: There are multiple categories of enrichments including KEGG, Reactome, Gene Ontology, pfam etc.
+- **Filtering the Enrichments**: enrichments with p_value < 0.05 was selected for plotting
+- **Plot the top Enrichments**: Through filtering the top enrichments based on p_value enrichments are plotted
 
 ### 4. Interaction Finder: for individual gene
+- **Fetches first‑degree neighbors of a given single_string_id.**
+- **Downloads all interactions among {single_string_id ∪ neighbors}.**
+- **Keeps only edges where the focal gene participates (from == id or to == id).**
+- **Adds a target column: “the other node” in each interaction with the focal gene.**
+- **De‑duplicates targets (one row per unique partner).**
+- **Sorts by combined_score (descending) and prepares:**
+- **interactions: full, filtered, sorted edge list (one row per partner)**
+- **combined_targets: the top 20 target IDs plus the focal gene**
+- **all_targets: all target IDs plus the focal gene (for broader subnetworks)**
 
 ### 4. PPI Construction: for individual gene
 ### 4. Enrichments Finder: for individual gene
