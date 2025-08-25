@@ -34,11 +34,13 @@ This project integrates Network and Functional Analysis of any gene. Sometimes, 
 - **all_targets: all target IDs plus the focal gene (for broader subnetworks)**
 
 ### 4. PPI Construction: for individual gene
+![PPI of DUOX1 Gene and its Neighbor Genes](Reuslt/PPI_example-01.png)
 - **Neighbor identification**: Finding all possible neighbor genes with combined scores evaluation.
 - **Gene Mapping**: Extract all the genes in interaction with the gene input.
 - **Combined Score Threshold**: Maintain theshold of interaction score > 150
 
 ### 4. Enrichments Finder: for individual gene
+![Top 10 Molecular Functions of DUOX1 Gene](Reuslt/enrichment_example-01.jpg)
 - **Get all the Enrichment**: Used the `get_enrichment` function in `STRINGdb` package.
 - **Check available categories of the Enrichments**: There are multiple categories of enrichments including KEGG, Reactome, Gene Ontology, pfam etc.
 - **Filtering the Enrichments**: enrichments with p_value < 0.05 was selected for plotting
